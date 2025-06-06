@@ -48,12 +48,11 @@ let tasks = [
     deadline: "25.06.2025",
   },
 ];
-
 // The function which shows the cards START
 function showCards() {
   for (item of tasks) {
     document.getElementById("result").innerHTML += `
-<div class="col my-3">
+<div class="customCard">
     <div class="card">
         <img src="../Images/${item.image}" 
         class="imgClass" 
@@ -65,7 +64,7 @@ function showCards() {
               <p class="fs-5"><span class="fw-semibold">Deadline: </span>${item.deadline}</p>
               <hr>
             <div>
-              <div class="d-flex justify-content-evenly">
+              <div class="d-flex flex-wrap justify-content-center gap-2">
               <button class="btn btn btn-outline-primary prtyBtnUp">Priority up</button>
               <button class="btn btn-outline-info prtyBtnDown">Priority down</button>
               <button type="button" class="btn btn-success"><i class="fa-solid fa-check"></i></button>
