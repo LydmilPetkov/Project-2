@@ -52,11 +52,11 @@ let tasks = [
 function showCards() {
   for (item of tasks) {
     document.getElementById("result").innerHTML += `
-<div>
-    <div class="card my-3 mx-5">
+<div class="col my-3">
+    <div class="card">
         <img src="../Images/${item.image}" 
         class="img-fluid object-fit-cover" 
-        style="height: 300px; width: 100%;" 
+        style="height: 300px; object-fit: cover;"
         alt="${item.name}">
         <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
