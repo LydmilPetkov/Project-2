@@ -48,6 +48,7 @@ let tasks = [
     deadline: "25.06.2025",
   },
 ];
+
 // The function which shows the cards START
 function showCards() {
   for (item of tasks) {
@@ -55,15 +56,21 @@ function showCards() {
 <div class="col my-3">
     <div class="card">
         <img src="../Images/${item.image}" 
-        class="img-fluid object-fit-cover" 
-        style="height: 300px; object-fit: cover;"
+        class="imgClass" 
         alt="${item.name}">
         <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text p-2 bg-success prtyLvlBg">Priotiy level: <span class="prtyLvlNum">${item.prtyLvl}</span></p>
-            <p class="fs-5"><span class="fw-semibold">Deadline: </span>${item.deadline}</p>
-            <button class="btn btn-primary prtyBtnUp">Priority up</button>
-            <button class="btn btn-secondary prtyBtnDown">Priority down</button>
+              <h5 class="card-title fs-3">${item.name}</h5>
+              <hr>
+              <p class="card-text p-2 bg-success prtyLvlBg">Priotiy level: <span class="prtyLvlNum">${item.prtyLvl}</span></p>
+              <p class="fs-5"><span class="fw-semibold">Deadline: </span>${item.deadline}</p>
+              <hr>
+            <div>
+              <div class="d-flex justify-content-evenly">
+              <button class="btn btn btn-outline-primary prtyBtnUp">Priority up</button>
+              <button class="btn btn-outline-info prtyBtnDown">Priority down</button>
+              <button type="button" class="btn btn-success"><i class="fa-solid fa-check"></i></button>
+              <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+            </div>
         </div>
     </div>
 </div>
