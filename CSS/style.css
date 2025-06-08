@@ -1,22 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Card styling START */
-.imgClass {
-  height: 300px;
+img.imgClass {
   width: 100%;
+  height: 300px;
   object-fit: cover;
 }
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 .customCard {
   width: 100%;
-}
-h1 {
-  text-align: center;
 }
 .customCard .card {
   height: 100%;
